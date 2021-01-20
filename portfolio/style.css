@@ -1,0 +1,32 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*set default font size 16px*/
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+}
+.name-highlight {
+  color: orange;
+}
+.half-width {
+  width: 40%;
+  float: left;
+  margin: 5%;
+  padding-left: 2%;
+}
+.half-width img {
+  width: 100%;
+}
+.top-banner {
+  background-image: url(/images/top-banner.png);
+  overflow: hidden;
+}
