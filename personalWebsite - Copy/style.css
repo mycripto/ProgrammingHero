@@ -40,13 +40,13 @@ section {
 .nav-list a {
   text-decoration: none;
   font-weight: 600;
-  font-size: 1.6rem;
-  color: black;
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.609);
 }
 /* intro section */
 .intro {
   width: 90%;
-  height: 50rem;
+  height: 55rem;
   margin: 2rem auto 2rem auto;
 }
 .intro-left {
@@ -54,20 +54,31 @@ section {
   margin-left: 10rem;
 }
 h1 {
-  font-size: 4rem;
+  font-size: 5rem;
   font-family: "Bebas Neue";
   letter-spacing: 3px;
 }
+
 h2 {
   font-size: 3rem;
   font-family: "Bebas Neue";
   letter-spacing: 2px;
 }
+#intro-text {
+  text-shadow: 4px 4px 10px gray;
+  color: #383737c4;
+}
 
-#hero-img {
-  max-height: 40rem;
+#hero-img-1 {
+  max-height: 50rem;
+  margin-right: -20rem;
+  margin-top: 0rem;
+  float: right;
+}
+#hero-img-2 {
+  max-height: 50rem;
   margin-left: 3rem;
-  margin-top: 10rem;
+  margin-top: 5rem;
 }
 .half-div {
   float: left;
@@ -94,7 +105,7 @@ h2 {
 /* about section */
 .about {
   width: 90%;
-  height: 50rem;
+  height: 60rem;
   margin: 2rem auto 2rem auto;
   position: relative;
 }
@@ -103,8 +114,8 @@ h2 {
 }
 .about-right {
   position: absolute;
-  top: 40%;
-  left: 50%;
+  top: 30%;
+  left: 60%;
   /* transform: translate(-50%, -50%); */
 }
 /* project section */
@@ -124,12 +135,11 @@ h2 {
 .showcase {
   position: absolute;
   width: 100%;
-  position: absolute;
-  left: 4rem;
+  left: 2.5rem;
 }
 .project {
   width: 30%;
-  height: 35rem;
+  height: 37rem;
   float: left;
   margin: 1rem;
   padding: 1rem;
@@ -144,6 +154,9 @@ h2 {
   text-decoration: none;
   float: right;
   color: orange;
+}
+.project p {
+  margin-bottom: 1rem;
 }
 /* inquiry section */
 .inquiry {
@@ -166,14 +179,14 @@ h2 {
   color: #fff;
   position: absolute;
   top: 50%;
-  left: 15%;
+  left: 20rem;
   transform: translate(-50%, -50%);
 }
 .work-inquiry .btn-text {
   /* float: right; */
   position: absolute;
   top: 50%;
-  left: 90%;
+  right: -2rem;
   transform: translate(-50%, -50%);
   width: 15rem;
   text-align: center;
