@@ -1,0 +1,221 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*set default font size 16px*/
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.8rem;
+  max-width: 160rem;
+  margin: 0 auto;
+}
+section {
+  /* margin: 0 50%; */
+}
+/* Navigation section */
+.nav-bar {
+  /* background-color: aquamarine; */
+  height: 6rem;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.157);
+}
+.nav-item {
+  float: right;
+  margin-right: 5rem;
+  margin-top: 2rem;
+}
+.nav-list {
+  display: inline;
+  padding: 1rem;
+}
+.nav-list a {
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.6rem;
+  color: black;
+}
+/* intro section */
+.intro {
+  width: 90%;
+  height: 50rem;
+  margin: 2rem auto 2rem auto;
+}
+.intro-left {
+  margin-top: 5rem;
+  margin-left: 10rem;
+}
+h1 {
+  font-size: 4rem;
+  font-family: "Bebas Neue";
+  letter-spacing: 3px;
+}
+h2 {
+  font-size: 3rem;
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
+}
+
+#hero-img {
+  max-height: 40rem;
+  margin-left: 3rem;
+  margin-top: 10rem;
+}
+.half-div {
+  float: left;
+  width: 40%;
+  margin: 0 auto;
+}
+.half-div::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.btn-text {
+  text-decoration: none;
+  font-family: "roboto";
+  font-size: 2rem;
+  height: 6rem;
+  width: 10rem;
+  background-image: linear-gradient(to right, #f88f01, #e27802);
+  border-radius: 5px;
+  padding: 1rem 2rem;
+  color: aliceblue;
+}
+/* about section */
+.about {
+  width: 90%;
+  height: 50rem;
+  margin: 2rem auto 2rem auto;
+  position: relative;
+}
+.about-right {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  /* transform: translate(-50%, -50%); */
+}
+/* project section */
+.projects {
+  width: 90%;
+  height: 60rem;
+  margin: 2rem auto 2rem auto;
+  background-color: rgba(229, 226, 226, 0.192);
+  border-radius: 15px;
+  position: relative;
+}
+.projects h2 {
+  text-align: center;
+  padding-top: 2rem;
+}
+.showcase {
+  position: absolute;
+  width: 100%;
+  position: absolute;
+  left: 4rem;
+}
+.project {
+  width: 30%;
+  float: left;
+  margin: 1rem;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px gray;
+}
+.project-img {
+  max-width: 80%;
+}
+.see-more {
+  text-decoration: none;
+  float: right;
+  color: orange;
+}
+/* inquiry section */
+.inquiry {
+  width: 90%;
+  height: 25rem;
+  margin: 2rem auto 2rem auto;
+  position: relative;
+}
+.work-inquiry {
+  background-color: papayawhip;
+  height: 25rem;
+  width: 80%;
+  border-radius: 30px;
+  background-image: url(/images/work.png);
+  background-size: cover;
+  position: relative;
+}
+.work-inquiry h1 {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+.work-inquiry .btn-text {
+  /* float: right; */
+  position: absolute;
+  top: 50%;
+  left: 90%;
+  transform: translate(-50%, -50%);
+  width: 15rem;
+  text-align: center;
+  padding-top: 1.8rem;
+}
+/* social section */
+.social {
+  width: 90%;
+  height: 25rem;
+  margin: 2rem auto 2rem auto;
+  position: relative;
+}
+.social-connect h3 {
+  font-family: "Bebas Neue";
+  letter-spacing: 2px;
+  text-align: center;
+  font-size: 1.7rem;
+  color: rgb(66, 66, 66);
+}
+.social-connect h2 {
+  font-family: "roboto";
+  text-align: center;
+  padding-bottom: 2.5rem;
+}
+.social-icons {
+  position: absolute;
+  width: 20rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 95%);
+}
+.social-icons img {
+  height: 4rem;
+  padding: 0 1rem;
+}
+/* other classes  */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.abs-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.highlited-text {
+  color: orange;
+}
+.mb2 {
+  margin-bottom: 3rem;
+}
