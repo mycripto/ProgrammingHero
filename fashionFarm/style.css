@@ -30,3 +30,21 @@ body {
   max-width: 160rem;
   margin: 0 auto;
 }
+.nav-list li {
+  margin: 0 1rem;
+  font-family: "Roboto";
+}
+.logo img {
+  width: 35rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.header-container {
+  background-color: #fffbf0;
+  background-image: url(./images/logo/dot.png);
+  background-repeat: no-repeat;
+  background-position: 40% 0;
+}
+.hero-img {
+  height: 40rem;
+}
