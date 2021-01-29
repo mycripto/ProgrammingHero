@@ -1,0 +1,32 @@
+/* colors:
+button: #A4BC46
+header : #FABE4C, #363958 bg: #FFFBF0
+
+Jacket card bg : #F1F1F1 , price: #FABE4C h2: #363958
+
+fonts: 
+logo: Montserrat
+Nav: Roboto
+header: Bebas Neue */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*set default font size 16px*/
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Bebas Neue", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  max-width: 160rem;
+  margin: 0 auto;
+}
