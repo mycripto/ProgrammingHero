@@ -46,7 +46,8 @@ body {
   background-position: 40% 0;
 }
 .hero-img {
-  height: 35rem;
+  max-height: 50rem;
+  width: auto;
   margin-left: 10rem;
 }
 .btn-texted {
@@ -131,6 +132,10 @@ header p {
   margin-left: 2rem;
 }
 /* section services  */
+.service-sec {
+  height: 60rem;
+  width: 100%;
+}
 .services {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
@@ -171,4 +176,10 @@ header p {
   font-size: 1.5rem;
   font-weight: 400;
   color: #363958;
+}
+footer {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: gray;
+  font-size: 1.5rem;
 }
