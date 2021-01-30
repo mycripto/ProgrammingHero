@@ -46,5 +46,76 @@ body {
   background-position: 40% 0;
 }
 .hero-img {
-  height: 40rem;
+  height: 35rem;
+  margin-left: 10rem;
+}
+.btn-texted {
+  padding: 1.3rem 2rem;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #b5d437, #839b26);
+  color: #fff;
+  box-shadow: 0px 4px 10px gray;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#btn-text {
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-family: "Bebas Neue";
+  font-size: 7rem;
+}
+header p {
+  font-family: "Roboto";
+  font-size: 1.8rem;
+}
+#header-text-1 {
+  color: #fabe4c;
+}
+#header-text-2 {
+  color: #363958;
+}
+/* Women cards */
+.card-women-outer {
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(177, 173, 173, 0.164);
+  background-color: #fff;
+  border: none;
+}
+.card-women-inner {
+  margin: 2rem auto 1rem auto;
+  width: 90%;
+  min-height: 20rem;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 2px 2px 10px rgb(177, 173, 173);
+}
+.dispaly-card img {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+  margin: 1rem auto 1rem auto;
+}
+.card-title-text {
+  font-family: "Roboto";
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+.card-details-text {
+  font-family: "Roboto";
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+.price {
+  font-family: "Roboto";
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fabe4c;
+  text-shadow: 4px 4px 10px lightgray, -4px -4x 10px #fff;
 }
