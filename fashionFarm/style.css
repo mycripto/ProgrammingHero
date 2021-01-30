@@ -87,20 +87,25 @@ header p {
   box-shadow: 2px 2px 10px rgba(177, 173, 173, 0.164);
   background-color: #fff;
   border: none;
+  height: 60rem;
 }
 .card-women-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 2rem auto 1rem auto;
   width: 90%;
-  min-height: 20rem;
+  height: 40rem;
   border-radius: 10px;
   background-color: #f1f1f1;
   box-shadow: 2px 2px 10px rgb(177, 173, 173);
 }
 .dispaly-card img {
-  display: flex;
-  justify-content: center;
-  width: 90%;
-  margin: 1rem auto 1rem auto;
+  /* width: 35rem; */
+  max-height: 35rem;
+  width: auto;
+
+  margin: 1rem;
 }
 .card-title-text {
   font-family: "Roboto";
@@ -118,4 +123,52 @@ header p {
   font-weight: 600;
   color: #fabe4c;
   text-shadow: 4px 4px 10px lightgray, -4px -4x 10px #fff;
+}
+.catagories {
+  font-family: "Bebas Neue";
+  font-size: 3.5rem;
+  color: #363958;
+  margin-left: 2rem;
+}
+/* section services  */
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 40rem;
+}
+.left-side,
+.right-side {
+  height: 35rem;
+  width: 100%;
+}
+#service-img {
+  width: 90%;
+  margin-top: 8rem;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 5px lightgray;
+  border-radius: 10px;
+  margin: 2rem 1rem;
+  height: 15rem;
+  max-width: 60rem;
+}
+.item-img {
+  height: 7rem;
+  margin: 0 2rem;
+}
+.item-text {
+  margin: auto 2rem;
+}
+.item-text h2 {
+  font-family: "Roboto";
+  font-weight: 600;
+  color: #363958;
+}
+.item-text p {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #363958;
 }
