@@ -1,0 +1,303 @@
+/* colors:
+button: #A4BC46
+header : #FABE4C, #363958 bg: #FFFBF0
+
+Jacket card bg : #F1F1F1 , price: #FABE4C h2: #363958
+
+fonts: 
+logo: Montserrat
+Nav: Roboto
+header: Bebas Neue */
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; /*set default font size 16px*/
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Bebas Neue", cursive;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.8rem;
+  max-width: 180rem;
+  min-width: 755px;
+  margin: 0 auto;
+}
+.wrapper {
+  max-width: 180rem;
+}
+.nav-list li {
+  margin: 0 1rem;
+  font-family: "Roboto";
+}
+.logo img {
+  width: 35rem;
+  margin-top: 2rem;
+  margin-left: 2rem;
+}
+.header-container {
+  width: 100%;
+  background-color: #fffbf0;
+  background-image: url(./images/logo/dot.png);
+  background-repeat: no-repeat;
+  background-position: 40% 0;
+}
+.banner {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5rem;
+}
+.banner-left {
+  margin: auto 2rem auto 4rem;
+}
+.banner-right {
+  margin: auto 4rem auto 2rem;
+}
+.hero-img {
+  max-height: 50rem;
+  width: auto;
+}
+.btn-texted {
+  padding: 1.3rem 2rem;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, #b5d437, #839b26);
+  color: #fff;
+  box-shadow: 0px 4px 10px gray;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#btn-text {
+  font-family: "Roboto";
+  font-size: 1.6rem;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+header h1 {
+  text-transform: uppercase;
+  font-family: "Bebas Neue";
+  font-size: 7rem;
+}
+
+header p {
+  font-family: "Roboto";
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+}
+#header-text-1 {
+  color: #fabe4c;
+}
+#header-text-2 {
+  color: #363958;
+}
+.jacket {
+  margin-bottom: 5rem;
+}
+/* Women cards */
+.card-women-outer {
+  border-radius: 10px;
+  box-shadow: 2px 2px 10px rgba(177, 173, 173, 0.164);
+  background-color: #fff;
+  border: none;
+  height: 60rem;
+}
+.card-women-inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem auto 1rem auto;
+  width: 90%;
+  height: 40rem;
+  border-radius: 10px;
+  background-color: #f1f1f1;
+  box-shadow: 2px 2px 10px rgb(177, 173, 173);
+}
+.dispaly-card img {
+  max-height: 35rem;
+  width: auto;
+
+  margin: 1rem;
+}
+
+.card-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 3rem;
+}
+.card-title-text {
+  font-family: "Roboto";
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-left: 3rem;
+}
+.card-details-text {
+  font-family: "Roboto";
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-left: 3rem;
+  margin-bottom: 3rem;
+}
+.price {
+  font-family: "Roboto";
+  font-size: 3rem;
+  font-weight: 600;
+  color: #fabe4c;
+  text-shadow: 4px 4px 10px lightgray, -4px -4x 10px #fff;
+}
+.catagories {
+  font-family: "Bebas Neue";
+  font-size: 3.5rem;
+  color: #363958;
+  margin-left: 6rem;
+}
+/* section services  */
+.service-sec {
+  height: 60rem;
+  width: 100%;
+}
+.services {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  height: 40rem;
+}
+.left-side,
+.right-side {
+  height: 35rem;
+  width: 100%;
+}
+#service-img {
+  width: 90%;
+  margin-top: 8rem;
+}
+.service-item {
+  display: flex;
+  align-items: center;
+  box-shadow: 1px 1px 5px lightgray;
+  border-radius: 10px;
+  margin: 2rem 1rem;
+  height: 15rem;
+  max-width: 60rem;
+}
+.item-img {
+  height: 7rem;
+  margin: 0 2rem;
+}
+.item-text {
+  margin: auto 2rem;
+}
+.item-text h2 {
+  font-family: "Roboto";
+  font-weight: 600;
+  color: #363958;
+}
+.item-text p {
+  font-family: "Roboto";
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: #363958;
+}
+footer {
+  text-align: center;
+  margin-bottom: 5rem;
+  color: gray;
+  font-size: 1.5rem;
+}
+
+/* Responsive */
+@media only screen and (max-width: 990px) {
+  .card-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem;
+  }
+  .dispaly-card img {
+    max-height: 25rem;
+  }
+  .card-women-outer {
+    height: 65rem;
+  }
+  .catagories {
+    font-family: "Bebas Neue";
+    font-size: 3.5rem;
+    color: #363958;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 767px) {
+  .card-bottom {
+    display: flex;
+    flex-direction: row;
+
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 3rem;
+  }
+  .dispaly-card img {
+    max-height: 35rem;
+  }
+  .left-side {
+    grid-row: 2/3;
+    grid-column: 1 /3;
+    height: auto;
+  }
+  .right-side {
+    grid-row: 1 /2;
+    grid-column: 1/3;
+    height: 20rem;
+  }
+  .services {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    height: auto;
+  }
+  .service-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 1px 1px 5px lightgrey;
+    border-radius: 10px;
+    margin: 2rem auto;
+    padding: 2rem 0;
+    height: 15rem;
+    max-width: 90%;
+    text-align: center;
+  }
+  .service-sec {
+    height: 110rem;
+    width: 100%;
+  }
+  #service-img {
+    height: auto;
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 850px) {
+  header h1 {
+    font-size: 5rem;
+  }
+}
+@media only screen and (max-width: 640px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  .banner-left {
+    grid-column: 1/-1;
+    margin: auto 2rem 5rem 4rem;
+  }
+  .banner-right {
+    grid-column: 1/-1;
+    margin: auto 4rem 5rem 2rem;
+  }
+}
