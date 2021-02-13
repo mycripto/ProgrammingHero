@@ -37,40 +37,39 @@
         <div class="col-md-4">
           <div class="deposit status">
             <h5>Deposit</h5>
-            <h2>$ 00</h2>
+            <h2>$ <span id="diposit-current">00</span></h2>
           </div>
         </div>
         <div class="col-md-4">
           <div class="withdraw status">
             <h5>Withdraw</h5>
-            <h2>$00</h2>
+            <h2>$ <span id="withdraw-current">00</span></h2>
           </div>
         </div>
         <div class="col-md-4">
           <div class="balance status">
             <h5>Balance</h5>
-            <h2>$ 1240</h2>
+            <h2>$ <span id="balance-current">1240</span></h2>
           </div>
         </div>
       </div>
     </div>
 
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6 input">
         <h1>Deposit</h1>
-        <input type="text" name="" id="" placeholder="Deposit amount" /><button
-          class="btn btn-success"
-        >
-          Deposit
-        </button>
+        <input type="text" name="" id="diposit" placeholder="Deposit amount" />
+        <button class="btn btn-success" id="btnDiposit">Deposit</button>
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6 input">
         <h1>Withdraw</h1>
-        <input type="text" name="" id="" placeholder="Withdraw amount" /><button
-          class="btn btn-success"
-        >
-          Withdraw
-        </button>
+        <input
+          type="text"
+          name=""
+          id="withdraw"
+          placeholder="Withdraw amount"
+        />
+        <button class="btn btn-success" id="btnWithdraw">Withdraw</button>
       </div>
     </div>
     <script src="script.js"></script>

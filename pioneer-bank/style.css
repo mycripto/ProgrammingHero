@@ -32,3 +32,7 @@ body {
   padding-top: 2.5rem;
   color: white;
 }
+.input {
+  display: flex;
+  flex-direction: column;
+}
