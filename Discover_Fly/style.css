@@ -66,13 +66,7 @@ a.active {
 .inp-width {
   min-width: 300px;
 }
-.plus-minus-btn {
-  color: #3352f2;
-  font-size: 30px;
-  padding: 2px;
-  margin-top: 10px;
-  word-spacing: 20px;
-}
+
 .booking-form .calculations {
   margin: 10px 0;
 }
@@ -106,16 +100,33 @@ a.active {
   font-weight: 400;
   margin-bottom: 25px;
 }
-
+.plus-minus-btn {
+  color: #3352f2;
+  font-size: 40px;
+  padding: 2px;
+  margin-top: 10px;
+  word-spacing: 20px;
+  display: flex;
+  align-items: center;
+}
 .btn-style {
-  display: block;
-  width: 100%;
+  /* display: block; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30px;
+  height: 25px;
   padding: 10px;
   border-radius: 5px;
   border: none;
   color: #fff;
   font-weight: 500;
   background-color: #3352f2;
+  margin: 0 3px;
+}
+.btn-book {
+  width: 100%;
+  height: 35px;
 }
 .amount {
   display: flex;

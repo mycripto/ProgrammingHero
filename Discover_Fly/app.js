@@ -42,7 +42,11 @@ btnMinus_Firstcls.addEventListener("click", function () {
     update();
   }
 });
-inputFirstCls.addEventListener("input", update);
+inputFirstCls.addEventListener("input", function () {
+  if (inputFirstCls.value > 0) {
+    update();
+  }
+});
 
 inputFirstCls.addEventListener("change", update);
 
@@ -60,7 +64,7 @@ btnMinus_economy.addEventListener("click", function () {
 });
 // inputEconomy.addEventListener("input", update);
 inputEconomy.addEventListener("input", function () {
-  if (inputEconomy.value > 0 && !isNaN(inputEconomy.value)) {
+  if (inputEconomy.value > 0) {
     update();
   }
 });
