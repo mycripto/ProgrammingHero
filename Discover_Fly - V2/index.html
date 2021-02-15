@@ -32,7 +32,7 @@
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhaka, BG">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
@@ -41,7 +41,7 @@
             <div class="inputs">
                 <div class="input-group">
                     <label" for="">Departure</label>
-                    <input class="inp-style" type="date" name="">
+                    <input id="depart-date" class="inp-style" type="date" name="">
                 </div>
                 <div class="input-group">
                     <label for="">Return</label>
@@ -101,17 +101,17 @@
         </div>
 
         <!-- Summary  -->
-        <div class="grid-container">
+        <div class="grid-container ">
             <div class="itinerary">
               <div class="title">
-                <h1 style="text-align: center;">Itenerary</h1>
+                <h2 style="text-align: center; ">Booking Summary</h2>
               </div>
               <div class="departure">
               <h2>Departure</h2>
               <br>
               <h3>Flying from: <span class="" id="depart_flfrom">Dhaka</span> </h3>
               <h3>Flying to: <span class="" id="depart_flTo">NY</span> </h3>
-              <h3>Date: <span id="departDate">00/00/0000</span> </h3>
+              <h3>Date: <span id="departDateSummary">00/00/0000</span> </h3>
               <h3>Time: <span id="">08:30pm</span> </h3>
 
               </div>
@@ -120,35 +120,35 @@
               <br>
               <h3>Flying from: <span class="" id="return_flfrom">Dhaka</span> </h3>
               <h3>Flying to: <span class="" id="return_flTo">NY</span> </h3>
-              <h3>Date: <span id="returnDate">Friday, 27 April 2021</span> </h3>
+              <h3>Date: <span id="returnDateSammary">27 April 2021</span> </h3>
               <h3>Time: <span id="">10:45am</span> </h3>
 
               </div>
             </div>
             <div class="fareDetails">
               <div class="title">
-                <h1 style="text-align: center;">Fare Details</h1>
+                <h2 >Fare Details</h2>
               </div>
               <div class="firstClass">
                 <h2>First Class</h2>
                 <br>
                 <h3>Traveller: <span id="fClsNum">0</span></h3>
-                <h3>Price: <span id="fClsPrice">0</span></h3>
+                <h3>Price: $<span id="fClsPrice">0</span></h3>
               </div>
               <div class="economyClass">
                 <h2>Economy Class</h2>
                 <br>
                 <h3>Traveller: <span id="eClsNum">0</span></h3>
-                <h3>Price: <span id="eClsPrice">0</span></h3>
+                <h3>Price: $<span id="eClsPrice">0</span></h3>
               </div>
             </div>
             <div class="fareSammary">
-              <h1 style="text-align: center; margin-bottom: 1rem;">Price summary</h1>
-              <h3>Subtotal:<span id="summarySub">0</span></h3>
-              <h3>Vat:<span id="summaryVat">0</span></h3>
-              <h2>Total: <span id="summaryTotal">0</span></h2>
-              <br><br>
-              <button class="btn-style btn-book">CONFIRM</button>
+              <h1 style="margin-bottom: 1.5rem;">Price </h1>
+              <h3>Subtotal: $<span id="summarySub">0</span></h3>
+              <h3>Vat: $<span id="summaryVat">0</span></h3>
+              <h2>Total: $<span id="summaryTotal">0</span></h2>
+              <br><br>          
+              <button id="btnConfirm" class="btn-style btn-book">CONFIRM</button>
             </div>
 
           </div>

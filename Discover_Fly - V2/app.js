@@ -9,13 +9,36 @@ const subtotal = document.querySelector("#subtotal");
 const vat = document.querySelector("#vat");
 const total = document.querySelector("#total");
 
-// init
-inputFirstCls.value = 0;
-inputEconomy.value = 0;
-subtotal.innerText = 0;
-vat.innerText = 0;
-total.innerText = 0;
+//Summary Section;
+//DOM selectors:
+const departFrom = document.querySelector("#depart_flfrom");
+const departTo = document.querySelector("#depart_flTo");
+const returnFrom = document.querySelector("#return_flfrom");
+const returntTo = document.querySelector("#return_flTo");
+const departDate = document.querySelector("#departDateSummary");
+const returnDate = document.querySelector("#returnDateSammary");
+const fClsQtty = document.querySelector("#fClsNum");
+const eClsQtty = document.querySelector("#eClsNum");
+const fClsPrice = document.querySelector("#fClsPrice");
+const eClsPrice = document.querySelector("#eClsPrice");
+const summarySub = document.querySelector("#summarySub");
+const summaryVat = document.querySelector("#summaryVat");
+const summaryTotal = document.querySelector("#summaryTotal");
+const flyFrom = document.querySelector("#fly-from");
+const flyTo = document.querySelector("#fly-to");
 
+// init
+function init() {
+  inputFirstCls.value = 0;
+  inputEconomy.value = 0;
+  subtotal.innerText = 0;
+  vat.innerText = 0;
+  total.innerText = 0;
+
+  document.querySelector(".booking-toggle").style.display = "block";
+  document.querySelector(".grid-container").style.display = "none";
+}
+init();
 //Price calculator
 function update() {
   //   ticket Price
@@ -29,6 +52,28 @@ function update() {
 
   //Grand Total
   total.innerText = parseFloat(subtotal.innerText) + parseFloat(vat.innerText);
+}
+
+function updateSummary() {
+  //update placeholders;
+  departTo.innerText = flyTo.placeholder;
+  departFrom.innerText = flyFrom.placeholder;
+  returnFrom.innerText = flyTo.placeholder;
+  returntTo.innerText = flyFrom.placeholder;
+  departDate.innerText = `28 March 2021`;
+
+  //update price
+  fClsQtty.innerText = inputFirstCls.value;
+  fClsPrice.innerText = parseFloat(inputFirstCls.value) * 150;
+  eClsQtty.innerText = inputEconomy.value;
+  eClsPrice.innerText = parseFloat(inputEconomy.value) * 100;
+  summarySub.innerText = subtotal.innerText;
+  summaryVat.innerText = vat.innerText;
+  summaryTotal.innerText = total.innerText;
+
+  //toggle
+  document.querySelector(".booking-toggle").style.display = "none";
+  document.querySelector(".grid-container").style.display = "block";
 }
 
 //First Class event handler
@@ -71,38 +116,12 @@ inputEconomy.addEventListener("input", function () {
 
 inputEconomy.addEventListener("change", update);
 
-//Summary Section;
-//selectors:
-let departFrom = document.querySelector("#depart_flfrom");
-let departTo = document.querySelector("#depart_flTo");
-let returnFrom = document.querySelector("#return_flfrom");
-let returntTo = document.querySelector("#return_flTo");
-let departDate = document.querySelector("#departDate");
-let returnDate = document.querySelector("#returnDate");
-let fClsQtty = document.querySelector("#fClsNum");
-let eClsQtty = document.querySelector("#eClsNum");
-let fClsPrice = document.querySelector("#fClsPrice");
-let eClsPrice = document.querySelector("#eClsPrice");
-let summarySub = document.querySelector("#summarySub");
-let summaryVat = document.querySelector("#summaryVat");
-let summaryTotal = document.querySelector("#summaryTotal");
-let flyFrom = document.querySelector("#fly-from");
-let flyTo = document.querySelector("#fly-to");
+//Book now btn handler
+document.querySelector("#btnBook").addEventListener("click", updateSummary);
 
-departTo.innerText = flyTo.placeholder;
-departFrom.innerText = flyFrom.placeholder;
-returnFrom.innerText = flyTo.placeholder;
-returntTo.innerText = flyFrom.placeholder;
-departDate.innerText = `Monday, 28 March 2021`;
-
-//first Class
-
-document.querySelector("#btnBook").addEventListener("click", function () {
-  fClsQtty.innerText = inputFirstCls.value;
-  fClsPrice.innerText = parseFloat(inputFirstCls.value) * 150;
-  eClsQtty.innerText = inputEconomy.value;
-  eClsPrice.innerText = parseFloat(inputEconomy.value) * 100;
-  summarySub.innerText = subtotal.innerText;
-  summaryVat.innerText = vat.innerText;
-  summaryTotal.innerText = total.innerText;
+//Confirm btn handler
+document.querySelector("#btnConfirm").addEventListener("click", function () {
+  alert(`Thank you for booking! Please check your email for payment options.
+Click Ok to go back home page.`);
+  init();
 });

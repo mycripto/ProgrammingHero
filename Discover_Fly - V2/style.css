@@ -51,6 +51,8 @@ a.active {
   padding: 25px;
   border-radius: 5px;
   float: left;
+  width: 30rem;
+  height: 45rem;
 }
 .booking-form h3 {
   margin: 10px 0px;
@@ -104,7 +106,7 @@ a.active {
   color: #3352f2;
   font-size: 40px;
   padding: 2px;
-  margin-top: 10px;
+  margin: 10px 25px 0 0;
   word-spacing: 20px;
   display: flex;
   align-items: center;
@@ -127,6 +129,13 @@ a.active {
 .btn-book {
   width: 100%;
   height: 35px;
+  /* margin-top: -1rem; */
+}
+#btnBook {
+  margin-top: 5rem;
+}
+#btnConfirm {
+  background-color: rgb(17, 163, 90);
 }
 .amount {
   display: flex;
@@ -134,7 +143,7 @@ a.active {
 }
 
 .summary-toggle {
-  display: block;
+  display: none;
 }
 .booking-toggle {
   display: block;
@@ -150,11 +159,13 @@ a.active {
     "fareDetails fareDetails"
     "fareSammary fareSammary";
   background-color: rgb(235, 231, 225);
-  width: 100%;
-  height: 50rem;
-  margin: 3rem auto;
+  width: 30rem;
+  height: 45rem;
+  /* margin: 3rem auto; */
   padding: 15px;
-  border-radius: 10px;
+  border-radius: 5px;
+  line-height: 25px;
+  border: 1px solid #ddd;
 }
 
 .itinerary {
@@ -166,6 +177,8 @@ a.active {
     "title title"
     "departure return";
   grid-area: itinerary;
+  border-bottom: 1px solid lightgray;
+  padding-bottom: 5px;
 }
 
 .departure {
@@ -185,6 +198,10 @@ a.active {
     "title title"
     "firstClass economyClass";
   grid-area: fareDetails;
+  margin-top: 3rem;
+  padding-bottom: 5px;
+
+  border-bottom: 1px solid lightgray;
 }
 
 .firstClass {
@@ -197,7 +214,20 @@ a.active {
 
 .fareSammary {
   grid-area: fareSammary;
+  margin-top: 3rem;
 }
 .title {
   grid-area: title;
 }
+
+.grid-container h3 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+.grid-container span {
+  font-weight: 400;
+  color: rgb(39, 38, 38);
+}
+
+/* amination */
+@keyframes;
