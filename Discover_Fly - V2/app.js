@@ -27,13 +27,18 @@ const summaryTotal = document.querySelector("#summaryTotal");
 const flyFrom = document.querySelector("#fly-from");
 const flyTo = document.querySelector("#fly-to");
 
-// init
+// initial setup
 function init() {
   inputFirstCls.value = 0;
   inputEconomy.value = 0;
   subtotal.innerText = 0;
   vat.innerText = 0;
   total.innerText = 0;
+
+  flyTo.value = "";
+  flyFrom.value = "";
+  document.getElementById("depart-date").value = "";
+  document.getElementById("return-date").value = "";
 
   document.querySelector(".booking-toggle").style.display = "block";
   document.querySelector(".grid-container").style.display = "none";
@@ -56,12 +61,32 @@ function update() {
 
 function updateSummary() {
   //update placeholders;
-  departTo.innerText = flyTo.placeholder;
-  departFrom.innerText = flyFrom.placeholder;
-  returnFrom.innerText = flyTo.placeholder;
-  returntTo.innerText = flyFrom.placeholder;
-  departDate.innerText = `28 March 2021`;
+  if (flyTo.value == "") {
+    departTo.innerText = flyTo.placeholder;
+    returnFrom.innerText = flyTo.placeholder;
+  } else {
+    departTo.innerText = flyTo.value;
+    returnFrom.innerText = flyTo.value;
+  }
+  if (flyFrom.value == "") {
+    departFrom.innerText = flyFrom.placeholder;
+    returntTo.innerText = flyFrom.placeholder;
+  } else {
+    departFrom.innerText = flyFrom.value;
+    returntTo.innerText = flyFrom.value;
+  }
 
+  // departDate.innerText = document.getElementById("depart-date").value;
+  if (document.getElementById("depart-date").value == "") {
+    departDate.innerText = "Tomorrow";
+  } else {
+    departDate.innerText = document.getElementById("depart-date").value;
+  }
+  if (document.getElementById("return-date").value == "") {
+    returnDate.innerText = "Flaxible date";
+  } else {
+    returnDate.innerText = document.getElementById("return-date").value;
+  }
   //update price
   fClsQtty.innerText = inputFirstCls.value;
   fClsPrice.innerText = parseFloat(inputFirstCls.value) * 150;
@@ -96,7 +121,6 @@ inputFirstCls.addEventListener("input", function () {
 inputFirstCls.addEventListener("change", update);
 
 //Economy class event handler
-
 btnPlus_economy.addEventListener("click", function () {
   inputEconomy.value++;
   update();
@@ -107,6 +131,7 @@ btnMinus_economy.addEventListener("click", function () {
     update();
   }
 });
+
 // inputEconomy.addEventListener("input", update);
 inputEconomy.addEventListener("input", function () {
   if (inputEconomy.value > 0) {
