@@ -32,11 +32,11 @@
             <h3>Booking Flights</h3>
             <div class="input-group">
                 <label for="">Flying From</label>
-                <input class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
+                <input id="fly-from" class="inp-style" type="text" name="" placeholder="Dhaka, Bangladesh">
             </div>
             <div class="input-group">
                 <label for="">Flying To</label>
-                <input class="inp-style" type="text" name="" placeholder="New York, United States">
+                <input id="fly-to" class="inp-style" type="text" name="" placeholder="New York, USA">
             </div>
             <div class="inputs">
                 <div class="input-group">
@@ -97,37 +97,61 @@
                     </div>
                 </div>
             </div>
-            <button class="btn-style btn-book">Book Now</button>
+            <button id="btnBook" class="btn-style btn-book">Book Now</button>
         </div>
 
         <!-- Summary  -->
-        <div class="booking-form summary-toggle">
-            <h3>Booking Summary</h3>
-       <div class="sammary-itinerary">
-           <h3>Itinerary</h3>
-           <div class="fly-from">
-               <h4>Flying from:</h4>
-               <span id="flyFrom">Dhaka</span>
-           </div>     
-           <div class="fly-to">
-            <h4>Flying to:</h4>
-            <span id="flyTo">NY</span>
-        </div>         
-       </div>
-       <div class="sammary-itinerary">
-        <h3>Fare details</h3>
-        <div class="fly-from">
-            <h4>First Class:</h4>
-            <h5>Traveller: <span id="fclsSeats">0</span></h5>
-            <h5>Amount: <span id="flAmount">0</span></h5>
-        </div>     
-        <div class="fly-to">
-         <h4>Flying to:</h4>
-         <span id="flyTo">NY</span>
-     </div>         
-    </div>          
-         <button class="btn-style btn-book">Confirm</button>
-        </div>
+        <div class="grid-container">
+            <div class="itinerary">
+              <div class="title">
+                <h1 style="text-align: center;">Itenerary</h1>
+              </div>
+              <div class="departure">
+              <h2>Departure</h2>
+              <br>
+              <h3>Flying from: <span class="" id="depart_flfrom">Dhaka</span> </h3>
+              <h3>Flying to: <span class="" id="depart_flTo">NY</span> </h3>
+              <h3>Date: <span id="departDate">00/00/0000</span> </h3>
+              <h3>Time: <span id="">08:30pm</span> </h3>
+
+              </div>
+              <div class="return">
+              <h2>Return</h2>
+              <br>
+              <h3>Flying from: <span class="" id="return_flfrom">Dhaka</span> </h3>
+              <h3>Flying to: <span class="" id="return_flTo">NY</span> </h3>
+              <h3>Date: <span id="returnDate">Friday, 27 April 2021</span> </h3>
+              <h3>Time: <span id="">10:45am</span> </h3>
+
+              </div>
+            </div>
+            <div class="fareDetails">
+              <div class="title">
+                <h1 style="text-align: center;">Fare Details</h1>
+              </div>
+              <div class="firstClass">
+                <h2>First Class</h2>
+                <br>
+                <h3>Traveller: <span id="fClsNum">0</span></h3>
+                <h3>Price: <span id="fClsPrice">0</span></h3>
+              </div>
+              <div class="economyClass">
+                <h2>Economy Class</h2>
+                <br>
+                <h3>Traveller: <span id="eClsNum">0</span></h3>
+                <h3>Price: <span id="eClsPrice">0</span></h3>
+              </div>
+            </div>
+            <div class="fareSammary">
+              <h1 style="text-align: center; margin-bottom: 1rem;">Price summary</h1>
+              <h3>Subtotal:<span id="summarySub">0</span></h3>
+              <h3>Vat:<span id="summaryVat">0</span></h3>
+              <h2>Total: <span id="summaryTotal">0</span></h2>
+              <br><br>
+              <button class="btn-style btn-book">CONFIRM</button>
+            </div>
+
+          </div>
         <!-- Summary end -->
 
         <div class="booking-content">

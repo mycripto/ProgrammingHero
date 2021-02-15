@@ -70,3 +70,39 @@ inputEconomy.addEventListener("input", function () {
 });
 
 inputEconomy.addEventListener("change", update);
+
+//Summary Section;
+//selectors:
+let departFrom = document.querySelector("#depart_flfrom");
+let departTo = document.querySelector("#depart_flTo");
+let returnFrom = document.querySelector("#return_flfrom");
+let returntTo = document.querySelector("#return_flTo");
+let departDate = document.querySelector("#departDate");
+let returnDate = document.querySelector("#returnDate");
+let fClsQtty = document.querySelector("#fClsNum");
+let eClsQtty = document.querySelector("#eClsNum");
+let fClsPrice = document.querySelector("#fClsPrice");
+let eClsPrice = document.querySelector("#eClsPrice");
+let summarySub = document.querySelector("#summarySub");
+let summaryVat = document.querySelector("#summaryVat");
+let summaryTotal = document.querySelector("#summaryTotal");
+let flyFrom = document.querySelector("#fly-from");
+let flyTo = document.querySelector("#fly-to");
+
+departTo.innerText = flyTo.placeholder;
+departFrom.innerText = flyFrom.placeholder;
+returnFrom.innerText = flyTo.placeholder;
+returntTo.innerText = flyFrom.placeholder;
+departDate.innerText = `Monday, 28 March 2021`;
+
+//first Class
+
+document.querySelector("#btnBook").addEventListener("click", function () {
+  fClsQtty.innerText = inputFirstCls.value;
+  fClsPrice.innerText = parseFloat(inputFirstCls.value) * 150;
+  eClsQtty.innerText = inputEconomy.value;
+  eClsPrice.innerText = parseFloat(inputEconomy.value) * 100;
+  summarySub.innerText = subtotal.innerText;
+  summaryVat.innerText = vat.innerText;
+  summaryTotal.innerText = total.innerText;
+});
