@@ -1,0 +1,19 @@
+.A1 {
+  &__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    &__subheader {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 2rem;
+    }
+    &__left {
+      width: 50%;
+      grid-column: 1/ 2;
+    }
+    &__right {
+      width: 50%;
+      grid-column: 2/-1;
+    }
+  }
+}
