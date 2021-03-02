@@ -62,6 +62,7 @@ h3 {
   display: flex;
   align-items: center;
   flex-direction: column;
+  text-align: left !important;
 }
 .recipe img {
   width: 90%;

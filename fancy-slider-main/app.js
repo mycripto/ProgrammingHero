@@ -6,6 +6,7 @@ const sliderBtn = document.getElementById("create-slider");
 const sliderContainer = document.getElementById("sliders");
 const searchInputText = document.getElementById("search");
 const durationinputNumber = document.getElementById("duration");
+const spinnerDiv = document.getElementById("spinner");
 
 // selected image
 let sliders = [];
@@ -17,6 +18,8 @@ const KEY = "15674931-a9d714b6e9d654524df198e00&q";
 
 // show images
 const showImages = (images) => {
+  spinnerDiv.classList.toggle("d-none"); // hide loading spinner
+
   imagesArea.style.display = "block";
   gallery.innerHTML = "";
   // show gallery title
@@ -30,18 +33,21 @@ const showImages = (images) => {
 };
 
 const getImages = (query) => {
+  spinnerDiv.classList.toggle("d-none"); // show loading spinner
   fetch(
     `https://pixabay.com/api/?key=${KEY}=${query}&image_type=photo&pretty=true`
   )
     .then((response) => response.json())
     .then((data) => showImages(data.hits)) //Bug: keyword is 'hits' instead of 'hitS'
+
     .catch((err) => console.log(err));
 };
 
 let slideIndex = 0;
 const selectItem = (event, img) => {
   let element = event.target;
-  element.classList.add("added");
+  // element.classList.add("added");
+  element.classList.toggle("added"); //toggle added class to sellect/ desellect images
 
   let item = sliders.indexOf(img);
   if (item === -1) {
@@ -145,3 +151,15 @@ function enterKeyEvent(btnToTrigger) {
     btnToTrigger.click();
   }
 }
+
+/*
+* Debugging log
+1. Bug: keyword is 'hits' instead of 'hitS';
+2. Bug: id name 'duration', not 'doration';
+3. Duration input fixed to positive number only; 
+4. Added enter key event for search and duration input field; 
+5. Addeed fuctionality to sellect/ desellect an image by clicking; 
+### Features added: 
+1. Loading spinner after search;
+
+ */
