@@ -68,3 +68,32 @@ img {
 /* .spinnerBtn {
   display: none;
 } */
+.img-footer {
+  opacity: 1;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6) 0, transparent);
+  font-size: 14px;
+  color: rgb(204, 32, 32);
+  min-height: 2rem;
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 0 0 3px 3px;
+}
+.items {
+  height: 100%;
+  width: 100%;
+  color: rgb(238, 229, 229);
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+.tag-link {
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 0 0.2rem;
+  /* height: 0.8rem; */
+  /* width: 100%; */
+  background: rgba(0, 0, 0, 0.336);
+  border-radius: 3px;
+  padding: 0 5px;
+}

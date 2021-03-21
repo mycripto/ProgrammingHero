@@ -25,10 +25,24 @@ const showImages = (images) => {
   // show gallery title
   galleryHeader.style.display = "flex";
   images.forEach((image) => {
-    let div = document.createElement("div");
-    div.className = "col-lg-3 col-md-4 col-xs-6 img-item mb-2";
-    div.innerHTML = ` <img class="img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">`;
-    gallery.appendChild(div);
+    const tags = image.tags.split(",");
+    let html = ` 
+    <div class="col-lg-3 col-md-4 col-xs-6 img-item mb-2">
+    <img class="img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">
+    <div class="img-footer d-flex align-items-center">    
+    <a class="btn tag-link"> <span class="items">${tags[0]} </span></a>    
+    <a class="btn tag-link"> <span class="items">${tags[1]} </span></a>    
+    <a class="btn tag-link"> <span class="items">${tags[2]} </span></a>    
+  </div>
+    </div>
+    `;
+    // let div = document.createElement("div");
+    // div.className = "col-lg-3 col-md-4 col-xs-6 img-item mb-2";
+    // div.innerHTML = ` <img class="img-fluid img-thumbnail" onclick=selectItem(event,"${image.webformatURL}") src="${image.webformatURL}" alt="${image.tags}">
+    // `;
+    // gallery.appendChild(div);
+
+    gallery.insertAdjacentHTML("beforeend", html);
   });
 };
 
@@ -39,7 +53,6 @@ const getImages = (query) => {
   )
     .then((response) => response.json())
     .then((data) => showImages(data.hits)) //Bug: keyword is 'hits' instead of 'hitS'
-
     .catch((err) => console.log(err));
 };
 
@@ -52,9 +65,10 @@ const selectItem = (event, img) => {
   let item = sliders.indexOf(img);
   if (item === -1) {
     sliders.push(img);
-  } else {
-    alert("Hey, Already added !");
   }
+  // else {
+  //   alert("Hey, Already added !");
+  // }
 };
 var timer;
 const createSlider = () => {
@@ -151,6 +165,10 @@ function enterKeyEvent(btnToTrigger) {
     btnToTrigger.click();
   }
 }
+// init
+(() => {
+  getImages("flower");
+})();
 
 /*
 * Debugging log
@@ -161,5 +179,6 @@ function enterKeyEvent(btnToTrigger) {
 5. Addeed fuctionality to sellect/ desellect an image by clicking; 
 ### Features added: 
 1. Loading spinner after search;
+2. Image tags displayed at bottom
 
  */
